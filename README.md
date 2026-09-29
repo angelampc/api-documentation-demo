@@ -39,5 +39,5 @@ The project focuses on:
 
 ## Project status
 
-🚧 Documentation demo in progress.
+This is a documentation portfolio project for a fictional API.
 
