@@ -207,9 +207,9 @@ Updates an existing ticket.
 
 #### Request body
 
-| Parameter | Type   | Required | Description                   |
-| --------- | ------ | -------- | ----------------------------- |
-| `status`  | string | Yes      | The new status of the ticket. |
+| Parameter | Type   | Required | Description                                                                       |
+| --------- | ------ | -------- | --------------------------------------------------------------------------------- |
+| `status`  | string | Yes      | The new status of the ticket. Accepted values: `open`, `in_progress`, `resolved`. |
 
 #### Example request
 
