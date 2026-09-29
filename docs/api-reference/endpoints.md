@@ -150,4 +150,46 @@ Returns the newly created ticket.
 | `401 Unauthorized` | The request could not be authenticated.       |
 | `404 Not Found`    | The specified customer could not be found.    |
 
+### Retrieve a ticket
+
+`GET /v1/tickets/{ticket_id}`
+
+Retrieves a specific support ticket.
+
+#### Path parameters
+
+| Parameter   | Type   | Required | Description                          |
+| ----------- | ------ | -------- | ------------------------------------ |
+| `ticket_id` | string | Yes      | The unique identifier of the ticket. |
+
+#### Example request
+
+```bash
+curl https://api.example.com/v1/tickets/tic_67892 \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+#### Example response
+
+```json
+{
+  "id": "tic_67892",
+  "customer_id": "cus_12345",
+  "subject": "Unable to access account",
+  "description": "The customer cannot log in.",
+  "status": "open",
+  "created_at": "2026-09-29T14:30:00Z",
+  "updated_at": "2026-09-29T14:30:00Z"
+}
+```
+
+#### Response
+
+Returns the requested support ticket.
+
+| Status code        | Description                              |
+| ------------------ | ---------------------------------------- |
+| `200 OK`           | The ticket was successfully retrieved.   |
+| `401 Unauthorized` | The request could not be authenticated.  |
+| `404 Not Found`    | The specified ticket could not be found. |
 
