@@ -18,7 +18,7 @@ The documentation covers:
 * Getting started
 * Authentication
 * Customers and support tickets
-* Common API workflows
+* Common API operations
 * Endpoint reference
 * Error handling and troubleshooting
 
