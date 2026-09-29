@@ -8,14 +8,14 @@ The API is organized around three main resources:
 
 * **Customers** — information about customers using the support service.
 * **Tickets** — support requests created by customers or support agents.
-* **Support history** — previous interactions and support activity associated with a customer.
+* **Support tickets** — support requests associated with a customer, which can be used to review previous support activity.
 
 ## Common workflows
 
 Typical API workflows include:
 
 1. Retrieve a customer's information.
-2. Check the customer's previous support history.
+2. Retrieve the customer's support tickets.
 3. Create a support ticket.
 4. Retrieve an existing ticket.
 5. Update the status of a ticket.
