@@ -193,3 +193,57 @@ Returns the requested support ticket.
 | `401 Unauthorized` | The request could not be authenticated.  |
 | `404 Not Found`    | The specified ticket could not be found. |
 
+### Update a ticket
+
+`PATCH /v1/tickets/{ticket_id}`
+
+Updates an existing ticket.
+
+#### Path parameters
+
+| Parameter   | Type   | Required | Description                          |
+| ----------- | ------ | -------- | ------------------------------------ |
+| `ticket_id` | string | Yes      | The unique identifier of the ticket. |
+
+#### Request body
+
+| Parameter | Type   | Required | Description                   |
+| --------- | ------ | -------- | ----------------------------- |
+| `status`  | string | Yes      | The new status of the ticket. |
+
+#### Example request
+
+```bash
+curl -X PATCH https://api.example.com/v1/tickets/tic_67892 \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "status": "resolved"
+  }'
+```
+
+#### Example response
+
+```json
+{
+  "id": "tic_67892",
+  "customer_id": "cus_12345",
+  "subject": "Unable to access account",
+  "description": "The customer cannot log in.",
+  "status": "resolved",
+  "created_at": "2026-09-29T14:30:00Z",
+  "updated_at": "2026-09-29T15:10:00Z"
+}
+```
+
+#### Response
+
+Returns the updated support ticket.
+
+| Status code        | Description                              |
+| ------------------ | ---------------------------------------- |
+| `200 OK`           | The ticket was successfully updated.     |
+| `400 Bad Request`  | The request contains invalid data.       |
+| `401 Unauthorized` | The request could not be authenticated.  |
+| `404 Not Found`    | The specified ticket could not be found. |
+
